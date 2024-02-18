@@ -1,2 +1,2 @@
-# SonProje
+# Üretken Akademi Bitirme Projesi
  

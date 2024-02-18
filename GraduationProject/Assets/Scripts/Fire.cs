@@ -6,7 +6,7 @@ public class Fire : MonoBehaviour
 {
     public GameObject bulletObject;
     public Transform bulletPoint;
-    float bulletSpeed = 15f;
+    float bulletSpeed = 20f;
     public AudioClip bulletSound;
     private AudioSource audioSource;
     void Start()
@@ -21,14 +21,12 @@ public class Fire : MonoBehaviour
             audioSource.PlayOneShot(bulletSound);
             FireUp();
         }
-        
-
     }
     public void FireUp()
     {
         GameObject bullet = Instantiate(bulletObject, bulletPoint.position, bulletPoint.rotation) as GameObject;
         Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
         bulletRb.velocity = bulletPoint.forward * bulletSpeed;
-        Destroy(bullet.gameObject, 2f);
+        Destroy(bullet.gameObject,6f);
     }      
 }

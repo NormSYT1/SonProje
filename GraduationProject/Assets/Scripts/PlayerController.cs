@@ -12,18 +12,24 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody tankRigidbody;
     public TMP_Text timeText;
-    private float time = 300f;
+    public float time = 3f;
+    public TMP_Text scoreText, lastText;
+    public int score = 0;
+    public GameObject lastPanel;
     private void Awake()
     {
+
         // Tankýn RigidBody bileþenini alýyoruz
         tankRigidbody = GetComponent<Rigidbody>();
     }
 
     private void Update()
     {
+        scoreText.text = "Score: " + score;
         // Hareket ve dönüþ fonksiyonlarýný çaðýrýyoruz
-        if (time > 0)
+        if (time > 1)
         {
+            lastPanel.SetActive(false);
             time -= Time.deltaTime;
             int timeInteger = Mathf.FloorToInt(time);
             timeText.text = "Time: " + timeInteger.ToString();
@@ -32,10 +38,10 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            lastText.text = "Your Score: " + score;
+            lastPanel.SetActive(true);
             Time.timeScale = 0f;
         }
-
-
     }
 
     private void Move()

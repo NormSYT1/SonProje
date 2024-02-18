@@ -348,6 +348,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/Bullet.cs"
+"Assets/Scripts/EnemyMove.cs"
 "Assets/Scripts/EscMenuController.cs"
 "Assets/Scripts/Fire.cs"
 "Assets/Scripts/MenuController.cs"

@@ -128,4 +128,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effect: {fileID: 5720557955116814392, guid: b83ba93fe47768941af69567aa03b714, type: 3}
-  effect2: {fileID: 5720557955116814392, guid: f587ce222b045a44dab12c8d07c4b489, type: 3}
+  explosionEffect: {fileID: 5720557955116814392, guid: f587ce222b045a44dab12c8d07c4b489, type: 3}

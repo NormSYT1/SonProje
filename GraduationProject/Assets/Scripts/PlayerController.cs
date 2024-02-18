@@ -5,24 +5,21 @@ using TMPro;
 [RequireComponent(typeof(CharacterController))]
 
 public class PlayerController : MonoBehaviour
-{
-  
+{ 
     public float moveSpeed = 5f; // Tankýn ileri/geri hareket hýzý
     public float rotationSpeed = 50f; // Tankýn dönüþ hýzý
 
     private Rigidbody tankRigidbody;
     public TMP_Text timeText;
-    public float time = 3f;
+    public float time = 60f;
     public TMP_Text scoreText, lastText;
     public int score = 0;
     public GameObject lastPanel;
     private void Awake()
     {
-
         // Tankýn RigidBody bileþenini alýyoruz
         tankRigidbody = GetComponent<Rigidbody>();
     }
-
     private void Update()
     {
         scoreText.text = "Score: " + score;
@@ -43,7 +40,6 @@ public class PlayerController : MonoBehaviour
             Time.timeScale = 0f;
         }
     }
-
     private void Move()
     {
         // Ýleri/geri hareket için input deðerini alýyoruz
@@ -53,7 +49,6 @@ public class PlayerController : MonoBehaviour
         // Hareket yönünü RigidBody üzerinden uyguluyoruz
         tankRigidbody.velocity = moveDirection * moveSpeed;
     }
-
     private void Rotate()
     {
         // Tankýn dönüþü için input deðerini alýyoruz

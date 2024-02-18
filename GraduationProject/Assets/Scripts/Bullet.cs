@@ -5,7 +5,7 @@ using TMPro;
 public class Bullet : MonoBehaviour
 {
     public GameObject effect;
-    public GameObject effect2;
+    public GameObject explosionEffect;
     PlayerController control;
     void Start()
     {
@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")  
         {
-            Instantiate(effect2, transform.position, transform.rotation);
+            Instantiate(explosionEffect, transform.position, transform.rotation);
             control.score++;
             Destroy(collision.gameObject);
             Destroy(gameObject);

@@ -6,13 +6,12 @@ public class Fire : MonoBehaviour
 {
     public GameObject bulletObject;
     public Transform bulletPoint;
-    float bulletSpeed = 20f;
+    float bulletSpeed = 25f;
     public AudioClip bulletSound;
     private AudioSource audioSource;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-
     }
     void Update()
     {

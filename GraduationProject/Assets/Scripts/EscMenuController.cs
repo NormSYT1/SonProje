@@ -11,6 +11,7 @@ public class EscMenuController : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1f;
+        Cursor.visible = false;
     }
     void Update()
     {
@@ -18,10 +19,12 @@ public class EscMenuController : MonoBehaviour
         {
             escMenu.SetActive(true);
             Time.timeScale = 0f;
+            Cursor.visible = true;
         }
     }
     public void ResumeButton()
     {
+        Cursor.visible = false;
         audioSource.Play();
         Time.timeScale = 1f;
         escMenu.SetActive(false);
@@ -30,6 +33,7 @@ public class EscMenuController : MonoBehaviour
     {
         audioSource.Play();
         settingsMenu.SetActive(true);
+        Cursor.visible = true;
     }
     public void QuitButton()
     {
